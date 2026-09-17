@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+<rect width="600" height="800" fill="#e07fa8"/>
+<circle cx="300" cy="300" r="150" fill="#2b2b2b" opacity="0.06"/>
+<path d="M170 800 C 210 560 250 470 300 430 C 350 470 390 560 430 800 Z" fill="#2b2b2b" opacity="0.1"/>
+<text x="300" y="760" text-anchor="middle" font-family="Georgia, serif" font-size="30" letter-spacing="6" fill="#2b2b2b" opacity="0.55">BLUSA</text>
+</svg>
