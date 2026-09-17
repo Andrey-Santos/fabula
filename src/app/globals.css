@@ -53,8 +53,8 @@ button {
 /* Reveal ao entrar na tela — ver components/site/reveal.tsx */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transform: translateY(10px);
+  transition: opacity 450ms ease-out, transform 450ms ease-out;
 }
 .reveal.is-visible {
   opacity: 1;

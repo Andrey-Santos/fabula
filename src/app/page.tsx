@@ -39,34 +39,30 @@ export default async function HomePage({
       <Hero />
 
       <section className="mx-auto mt-12 max-w-7xl px-4 lg:mt-16">
-        <Reveal>
-          <ul className="grid divide-y divide-line rounded-lg border border-line bg-cream-deep shadow-sm sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
-            {benefits.map((benefit) => (
-              <li
-                key={benefit.title}
-                className="flex items-center gap-3 px-5 py-5 transition-colors hover:bg-cream"
-              >
-                <benefit.icon className="size-6 text-gold-deep" aria-hidden />
-                <div>
-                  <p className="text-sm font-medium">{benefit.title}</p>
-                  <p className="text-sm text-muted">{benefit.text}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        <ul className="grid divide-y divide-line rounded-lg border border-line bg-cream-deep shadow-sm sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+          {benefits.map((benefit) => (
+            <li
+              key={benefit.title}
+              className="flex items-center gap-3 px-5 py-5 transition-colors hover:bg-cream"
+            >
+              <benefit.icon className="size-6 text-gold-deep" aria-hidden />
+              <div>
+                <p className="text-sm font-medium">{benefit.title}</p>
+                <p className="text-sm text-muted">{benefit.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20">
-        <Reveal>
-          <SectionTitle title="Categorias" subtitle="Encontre o seu estilo" />
-        </Reveal>
+        <SectionTitle title="Categorias" subtitle="Encontre o seu estilo" />
         <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {categories.map((category, index) => (
-            <Reveal key={category.slug} as="li" delay={index * 60} className="h-full">
+          {categories.map((category) => (
+            <li key={category.slug}>
               <Link
                 href={`/?categoria=${category.slug}#novidades`}
-                className="group block h-full overflow-hidden rounded-lg bg-cream-deep transition-shadow hover:shadow-lg"
+                className="group block overflow-hidden rounded-lg bg-cream-deep transition-shadow hover:shadow-lg"
               >
                 <AspectRatio ratio={3 / 4}>
                   <Image
@@ -82,42 +78,38 @@ export default async function HomePage({
                   <ArrowRight className="size-4 text-gold-deep transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
-            </Reveal>
+            </li>
           ))}
         </ul>
       </section>
 
       <section id="novidades" className="mx-auto max-w-7xl scroll-mt-32 px-4 pb-16">
-        <Reveal>
-          <SectionTitle
-            title={activeCategory ? categories.find((c) => c.slug === activeCategory)!.name : "Novidades"}
-            subtitle={
-              activeCategory
-                ? `${showcase.length} peças nesta categoria`
-                : "As peças mais desejadas da estação"
-            }
-            action={
-              activeCategory ? (
-                <Link href="/#novidades" className="text-sm hover:text-gold-deep">
-                  Limpar filtro
-                </Link>
-              ) : (
-                <Link
-                  href="/?categoria=vestidos#novidades"
-                  className="hidden items-center gap-1 text-sm hover:text-gold-deep sm:flex"
-                >
-                  Ver todas as novidades
-                  <ArrowRight className="size-4" />
-                </Link>
-              )
-            }
-          />
-        </Reveal>
+        <SectionTitle
+          title={activeCategory ? categories.find((c) => c.slug === activeCategory)!.name : "Novidades"}
+          subtitle={
+            activeCategory
+              ? `${showcase.length} peças nesta categoria`
+              : "As peças mais desejadas da estação"
+          }
+          action={
+            activeCategory ? (
+              <Link href="/#novidades" className="text-sm hover:text-gold-deep">
+                Limpar filtro
+              </Link>
+            ) : (
+              <Link
+                href="/?categoria=vestidos#novidades"
+                className="hidden items-center gap-1 text-sm hover:text-gold-deep sm:flex"
+              >
+                Ver todas as novidades
+                <ArrowRight className="size-4" />
+              </Link>
+            )
+          }
+        />
         <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4">
-          {showcase.map((product, index) => (
-            <Reveal key={product.slug} delay={(index % 4) * 60}>
-              <ProductCard product={product} />
-            </Reveal>
+          {showcase.map((product) => (
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       </section>
