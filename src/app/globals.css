@@ -50,6 +50,15 @@ button {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* Faixa de avisos rolando devagar no mobile — ver components/site/announcement-bar.tsx */
+.marquee-track {
+  animation: marquee 18s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Reveal ao entrar na tela — ver components/site/reveal.tsx */
 .reveal {
   opacity: 0;
@@ -73,5 +82,8 @@ button {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .marquee-track {
+    animation: none;
   }
 }
