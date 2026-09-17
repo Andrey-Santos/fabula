@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CreditCard, RefreshCw, Store, Truck } from "lucide-react";
+import { ArrowRight, CreditCard, Store, Truck } from "lucide-react";
 
 import { Hero } from "@/components/site/hero";
 import { Reveal } from "@/components/site/reveal";
@@ -16,7 +16,6 @@ import { site } from "@/data/site";
 const benefits = [
   { icon: CreditCard, title: "Crediário próprio", text: "6x sem juros" },
   { icon: Truck, title: "Frete grátis", text: "para todo o Brasil" },
-  { icon: RefreshCw, title: "Trocas", text: "com mais facilidade" },
   { icon: Store, title: "Atendimento", text: "loja física + WhatsApp" },
 ];
 
@@ -39,7 +38,7 @@ export default async function HomePage({
       <Hero />
 
       <section className="mx-auto mt-9 max-w-7xl px-4 lg:mt-12">
-        <ul className="grid divide-y divide-line rounded-lg border border-line bg-cream-deep shadow-sm sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
+        <ul className="grid divide-y divide-line rounded-lg border border-line bg-cream-deep shadow-sm sm:grid-cols-3 sm:divide-y-0 sm:divide-x">
           {benefits.map((benefit) => (
             <li
               key={benefit.title}

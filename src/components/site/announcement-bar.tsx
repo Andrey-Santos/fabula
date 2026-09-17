@@ -3,11 +3,7 @@ import { MapPin } from "lucide-react";
 import { SocialLinks } from "@/components/site/social-links";
 import { site } from "@/data/site";
 
-const messages = [
-  "Frete grátis para todo o Brasil",
-  "Crediário próprio em até 6x sem juros",
-  "Loja física + WhatsApp",
-];
+const messages = ["Frete grátis para todo o Brasil", "Loja física + WhatsApp"];
 
 function MessageGroup({ hidden }: { hidden?: boolean }) {
   return (
