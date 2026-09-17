@@ -38,7 +38,7 @@ export default async function HomePage({
     <>
       <Hero />
 
-      <section className="mx-auto mt-12 max-w-7xl px-4 lg:mt-16">
+      <section className="mx-auto mt-9 max-w-7xl px-4 lg:mt-12">
         <ul className="grid divide-y divide-line rounded-lg border border-line bg-cream-deep shadow-sm sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
           {benefits.map((benefit) => (
             <li
@@ -55,7 +55,7 @@ export default async function HomePage({
         </ul>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20">
+      <section className="mx-auto max-w-7xl px-4 py-15">
         <SectionTitle title="Categorias" subtitle="Encontre o seu estilo" />
         <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {categories.map((category) => (
@@ -83,7 +83,7 @@ export default async function HomePage({
         </ul>
       </section>
 
-      <section id="novidades" className="mx-auto max-w-7xl scroll-mt-32 px-4 pb-16">
+      <section id="novidades" className="mx-auto max-w-7xl scroll-mt-32 px-4 pb-12">
         <SectionTitle
           title={activeCategory ? categories.find((c) => c.slug === activeCategory)!.name : "Novidades"}
           subtitle={
@@ -114,7 +114,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section id="sobre" className="mx-auto max-w-7xl scroll-mt-32 px-4 pb-16">
+      <section id="sobre" className="mx-auto max-w-7xl scroll-mt-32 px-4 pb-12">
         <Reveal>
           <div className="relative grid overflow-hidden rounded-lg lg:grid-cols-[1.05fr_1fr]">
             <div className="relative z-10 bg-gold px-8 py-12 sm:px-12 lg:[clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] lg:pr-24">
@@ -148,7 +148,7 @@ export default async function HomePage({
         </Reveal>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-20">
+      <section className="mx-auto max-w-7xl px-4 pb-15">
         <Reveal>
           <SectionTitle
             title="Elas usam Fabula"

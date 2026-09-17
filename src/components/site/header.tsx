@@ -104,7 +104,7 @@ export function Header() {
               <ShoppingBag className="size-5" />
               <span
                 className={cn(
-                  "absolute -right-0.5 -top-0.5 grid size-5 place-items-center rounded-full bg-gold text-[11px] font-medium text-ink",
+                  "absolute right-0 top-0 grid size-5 place-items-center rounded-full bg-gold text-[11px] font-medium text-ink",
                   count === 0 && "bg-cream-deep text-muted",
                 )}
               >
